@@ -3,9 +3,9 @@ import datetime
 from django.db import models
 
 class Employee(models.Model):
-    uid = models.IntegerField()
+    uid = models.IntegerField(blank=True, null=True)
     name = models.CharField(max_length=20)
-    card_id = models.IntegerField()
+    card_id = models.IntegerField(blank=True, null=True)
     salary = models.IntegerField(default=0)
 
     def __str__(self):
